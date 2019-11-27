@@ -38,7 +38,7 @@ public class ProcessUtil {
     public static boolean isMainAppProcess(Context context) {
         String currentProcessName = getProcessName(context);
         return !TextUtils.isEmpty(currentProcessName)
-                && TextUtils.equals(currentProcessName, BuildConfig.APPLICATION_ID)
+                && TextUtils.equals(currentProcessName, context.getPackageName())
                 ;
     }
 
